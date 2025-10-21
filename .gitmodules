@@ -1,0 +1,15 @@
+[submodule "RIFTCast/src/riftcast/_C/external/zstd"]
+	path = RIFTCast/src/riftcast/_C/external/zstd
+	url = https://github.com/facebook/zstd.git
+[submodule "RIFTCast/src/riftcast/_C/external/charonload"]
+	path = RIFTCast/src/riftcast/_C/external/charonload
+	url = https://github.com/vc-bonn/charonload.git
+[submodule "RIFTCast/src/riftcast/_C/external/atcg_lib"]
+	path = RIFTCast/src/riftcast/_C/external/atcg_lib
+	url = https://github.com/DerAndereDomenic/atcg_framework.git
+[submodule "RIFTCast/src/riftcast/_C/external/torchhull"]
+	path = RIFTCast/src/riftcast/_C/external/torchhull
+	url = https://github.com/vc-bonn/torchhull.git
+[submodule "RIFTCast/src/riftcast/_C/external/maskcompression"]
+	path = RIFTCast/src/riftcast/_C/external/maskcompression
+	url = https://github.com/DerAndereDomenic/maskcompression.git

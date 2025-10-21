@@ -1,0 +1,1 @@
+#define NUM_CAMERAS 3

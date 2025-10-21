@@ -1,0 +1,39 @@
+[project]
+name = "riftcast"
+version = "0.2.0"
+authors = [{ name = "Domenic Zingsheim", email = "zingsheim@cs.uni-bonn.de" }]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["torch", "numpy", "charonload"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: C++",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Intended Audience :: Science/Research",
+]
+
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    # Packaging
+    "build",
+
+    # Tests
+    "pytest>=7",
+    "pytest-benchmark",
+
+    # Other
+    "nox",
+]

@@ -1,0 +1,156 @@
+{
+    "version": 5,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 27,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        },
+        {
+            "name": "RIFTCast_app-Debug",
+            "inherits": "base",
+            "displayName": "RIFTCast App (Debug)",
+            "description": "Standalone reconstruction app (local + VR) - Debug build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "RIFT_HEADLESS": "OFF"
+            }
+        },
+        {
+            "name": "RIFTCast_app-Release",
+            "inherits": "base",
+            "displayName": "RIFTCast App (Release)",
+            "description": "Standalone reconstruction app (local + VR) - Release build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "RIFT_HEADLESS": "OFF"
+            }
+        },
+        {
+            "name": "RIFTCast_server-Debug",
+            "inherits": "base",
+            "displayName": "RIFTCast Server (Debug)",
+            "description": "Server mode using two GPUs - Debug build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "RIFT_HEADLESS": "ON"
+            }
+        },
+        {
+            "name": "RIFTCast_server-Release",
+            "inherits": "base",
+            "displayName": "RIFTCast Server (Release)",
+            "description": "Server mode using two GPUs - Release build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "RIFT_HEADLESS": "ON"
+            }
+        },
+        {
+            "name": "RIFTCast_client-Debug",
+            "inherits": "base",
+            "displayName": "RIFTCast Client (Debug)",
+            "description": "Remote client (VR-enabled) - Debug build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "RIFT_HEADLESS": "OFF"
+            }
+        },
+        {
+            "name": "RIFTCast_client-Release",
+            "inherits": "base",
+            "displayName": "RIFTCast Client (Release)",
+            "description": "Remote client (VR-enabled) - Release build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "RIFT_HEADLESS": "OFF"
+            }
+        },
+        {
+            "name": "RIFTCast_exporter-Debug",
+            "inherits": "base",
+            "displayName": "RIFTCast Exporter (Debug)",
+            "description": "Exporter utility for writing reconstruction results - Debug build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "RIFT_HEADLESS": "OFF"
+            }
+        },
+        {
+            "name": "RIFTCast_exporter-Release",
+            "inherits": "base",
+            "displayName": "RIFTCast Exporter (Release)",
+            "description": "Exporter utility for writing reconstruction results - Release build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "RIFT_HEADLESS": "OFF"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "RIFTCast_app-Debug",
+            "configurePreset": "RIFTCast_app-Debug",
+            "targets": [
+                "RIFTCast_app"
+            ]
+        },
+        {
+            "name": "RIFTCast_app-Release",
+            "configurePreset": "RIFTCast_app-Release",
+            "targets": [
+                "RIFTCast_app"
+            ]
+        },
+        {
+            "name": "RIFTCast_server-Debug",
+            "configurePreset": "RIFTCast_server-Debug",
+            "targets": [
+                "RIFTCast_server"
+            ]
+        },
+        {
+            "name": "RIFTCast_server-Release",
+            "configurePreset": "RIFTCast_server-Release",
+            "targets": [
+                "RIFTCast_server"
+            ]
+        },
+        {
+            "name": "RIFTCast_client-Debug",
+            "configurePreset": "RIFTCast_client-Debug",
+            "targets": [
+                "RIFTCast_client"
+            ]
+        },
+        {
+            "name": "RIFTCast_client-Release",
+            "configurePreset": "RIFTCast_client-Release",
+            "targets": [
+                "RIFTCast_client"
+            ]
+        },
+        {
+            "name": "RIFTCast_exporter-Debug",
+            "configurePreset": "RIFTCast_exporter-Debug",
+            "targets": [
+                "RIFTCast_exporter"
+            ]
+        },
+        {
+            "name": "RIFTCast_exporter-Release",
+            "configurePreset": "RIFTCast_exporter-Release",
+            "targets": [
+                "RIFTCast_exporter"
+            ]
+        }
+    ]
+}
