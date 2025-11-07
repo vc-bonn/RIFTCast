@@ -27,8 +27,6 @@
 #include <riftcast/RenderModule.h>
 #include <riftcast/InpaintingModule.h>
 
-#include <interceptor/logging.h>
-
 struct ClientState
 {
     ClientState() = default;
@@ -743,8 +741,6 @@ private:
 
 atcg::Application* atcg::createApplication()
 {
-    vci::interceptor::setup_logger(spdlog::level::info);    //
-
     atcg::WindowProps props;
     props.vsync  = false;
     props.hidden = true;
